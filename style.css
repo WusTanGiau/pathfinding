@@ -88,7 +88,7 @@ body {
 }
 
 .legend-item .end {
-    background-color: #000;
+    background-color: #ba47d1;
 }
 
 .legend-item .wall {
@@ -164,11 +164,11 @@ td {
 }
 
 td.start {
-    background-color: rgb(100, 255, 100);
+    background-color: #64ff64;
 }
 
 td.end {
-    background-color: black;
+    background-color: #ba47d1;
 }
 
 td.obstacle {
