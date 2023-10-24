@@ -12,6 +12,7 @@ body {
     position: relative;
     font-family: 'Poppins', sans-serif;
     background-image: url("https://raw.githubusercontent.com/MiyagawaMizu/Pathfinding-BFS/main/img/background.jpg");
+    /* background-color: black; */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
