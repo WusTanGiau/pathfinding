@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+		<script src="script.js"></script>
+		<title>Pathfinding BFS</title>
+	</head>
+	<body>
+		<header>
+			<div class="author">
+				<img
+					src="https://avatars.githubusercontent.com/u/71164002?v=4"
+					alt="Mizu" />
+				<div class="author-info">
+					<h1>Mizu</h1>
+				</div>
+			</div>
+			<h1>Pathfinding with BFS</h1>
+		</header>
+		<div class="container">
+			<div class="box-1">
+				<table id="grid"></table>
+				<div class="button-box">
+					<button onclick="clearGrid()">Clear</button>
+					<button onclick="visualizeBFS()">Bắt Đầu Tìm Đường</button>
+				</div>
+			</div>
+			<div class="spliter"></div>
+			<div class="box-2">
+				<h3>Giải Thích</h3>
+				<div class="legend">
+					<div class="legend-item">
+						<div class="start"></div>
+						<p>Điểm Bắt Đầu</p>
+					</div>
+					<div class="legend-item">
+						<div class="end"></div>
+						<p>Điểm Kết Thúc</p>
+					</div>
+					<div class="legend-item">
+						<div class="wall"></div>
+						<p>Tường</p>
+					</div>
+					<div class="legend-item">
+						<div class="visited"></div>
+						<p>Đã Đi Qua</p>
+					</div>
+					<div class="legend-item">
+						<div class="path"></div>
+						<p>Đường Đi</p>
+					</div>
+			</div>
+			<script>
+				createGrid();
+			</script>
+		</div>
+		<footer>
+			<p>
+				Mizu ©️
+				<script>
+					document.write(new Date().getFullYear());
+				</script>
+			</p>
+			<a
+				href="https://github.com/MiyagawaMizu/Pathfinding-BFS"
+				target="_blank"
+				rel="noopener noreferrer"
+				>Soure code <i class="fab fa-github"></i>
+			</a>
+		</footer>
+	</body>
+</html>
