@@ -116,7 +116,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: #333 1px solid;
+    border-bottom: white 1px solid;
 }
 
 header h1,
@@ -214,7 +214,7 @@ footer {
     color: var(--text-color);
     padding: 15px 0px;
     text-align: center;
-    border-top: #333 1px solid;
+    border-top: white 1px solid;
 }
 
 footer p {
