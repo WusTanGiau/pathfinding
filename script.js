@@ -88,6 +88,34 @@ async function visualizeBFS() {
 	}
 }
 
+// Thực hiện thuật toán DFS để tạo đường đi và tô màu các ô.
+async function visualizeDFS() {
+	clearGrid();
+	const stack = [{ row: startCell.row, col: startCell.col, path: [] }];
+	while (stack.length > 0) {
+		const { row, col, path } = stack.pop();
+		if (row < 0 || col < 0 || row >= numRows || col >= numCols) continue;
+		const cell = grid[row][col];
+		if (
+			cell.classList.contains("visited") ||
+			cell.classList.contains("obstacle")
+		)
+			continue;
+		cell.classList.add("visited");
+		path.push(cell);
+		if (row === endCell.row && col === endCell.col) {
+			await animatePath(path);
+			return;
+		}
+		await sleep(50);
+		// Thêm các ô lân cận vào stack theo thứ tự ưu tiên (trái, phải, trên, dưới).
+		stack.push({ row: row, col: col + 1, path: path.slice() });
+		stack.push({ row: row, col: col - 1, path: path.slice() });
+		stack.push({ row: row + 1, col: col, path: path.slice() });
+		stack.push({ row: row - 1, col: col, path: path.slice() });
+	}
+}
+
 // Tô màu các ô trên đường đi để hiển thị kết quả.
 async function animatePath(path) {
 	for (const cell of path) {
